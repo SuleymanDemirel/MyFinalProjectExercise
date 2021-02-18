@@ -1692,9 +1692,25 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.11"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -6144,14 +6160,20 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
     "Entities/1.0.0": {
       "type": "project",
-      "path": "../repos/Entities/Entities.csproj",
-      "msbuildProject": "../repos/Entities/Entities.csproj"
+      "path": "../Entities/Entities.csproj",
+      "msbuildProject": "../Entities/Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Core >= 1.0.0",
       "Entities >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.11",
       "NETStandard.Library >= 2.0.3"
@@ -6165,11 +6187,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\suley\\source\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\suley\\source\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\suley\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\suley\\source\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -6191,8 +6213,11 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\suley\\source\\repos\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\suley\\source\\repos\\Entities\\Entities.csproj"
+            "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\Core\\Core.csproj"
+            },
+            "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\Entities\\Entities.csproj"
             }
           }
         }

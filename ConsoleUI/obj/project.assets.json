@@ -1685,10 +1685,24 @@
           "bin/placeholder/Business.dll": {}
         }
       },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.11"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
       "DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Core": "1.0.0",
           "Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.11"
         },
@@ -1702,6 +1716,9 @@
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -6301,10 +6318,15 @@
       "path": "../Business/Business.csproj",
       "msbuildProject": "../Business/Business.csproj"
     },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
     "DataAccess/1.0.0": {
       "type": "project",
-      "path": "../../DataAccess/DataAccess.csproj",
-      "msbuildProject": "../../DataAccess/DataAccess.csproj"
+      "path": "../DataAccess/DataAccess.csproj",
+      "msbuildProject": "../DataAccess/DataAccess.csproj"
     },
     "Entities/1.0.0": {
       "type": "project",
@@ -6328,11 +6350,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\suley\\source\\repos\\ConsoleUI\\ConsoleUI.csproj",
+      "projectUniqueName": "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\ConsoleUI\\ConsoleUI.csproj",
       "projectName": "ConsoleUI",
-      "projectPath": "C:\\Users\\suley\\source\\repos\\ConsoleUI\\ConsoleUI.csproj",
+      "projectPath": "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\ConsoleUI\\ConsoleUI.csproj",
       "packagesPath": "C:\\Users\\suley\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\suley\\source\\repos\\ConsoleUI\\obj\\",
+      "outputPath": "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\ConsoleUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -6354,14 +6376,14 @@
         "netcoreapp2.1": {
           "targetAlias": "netcoreapp2.1",
           "projectReferences": {
-            "C:\\Users\\suley\\source\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\suley\\source\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\Business\\Business.csproj"
             },
-            "C:\\Users\\suley\\source\\repos\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\suley\\source\\repos\\Business\\Business.csproj"
+            "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\suley\\source\\repos\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\suley\\source\\repos\\Entities\\Entities.csproj"
+            "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\suley\\source\\repos\\SuleymanDemirel\\MyFinalProjectExercise\\Entities\\Entities.csproj"
             }
           }
         }
